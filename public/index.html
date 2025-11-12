@@ -1,0 +1,24 @@
+<form id="formVehiculo">
+  <input id="placa" placeholder="Placa" />
+  <input id="marca" placeholder="Marca" />
+  <input id="modelo" placeholder="Modelo" />
+  <button type="submit">Registrar</button>
+</form>
+
+<script>
+document.getElementById("formVehiculo").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const data = {
+    placa: placa.value,
+    marca: marca.value,
+    modelo: modelo.value
+  };
+  const res = await fetch("http://localhost:3000/vehiculos", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+  const result = await res.json();
+  console.log(result);
+});
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Vehículos</title>
+</head>
+<body>
+  <h1>Vehículos Registrados</h1>
+  <table border="1">
+    <tr>
+      <th>Placa</th>
+      <th>Tipo</th>
+      <th>Hora de Entrada</th>
+    </tr>
+    <% vehiculos.forEach(v => { %>
+      <tr>
+        <td><%= v.placa %></td>
+        <td><%= v.tipo %></td>
+        <td><%= v.horaEntrada %></td>
+      </tr>
+    <% }) %>
+  </table>
+  <a href="/">Volver</a>
+</body>
+</html>
