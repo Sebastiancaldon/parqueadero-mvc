@@ -1,5 +1,5 @@
 # Imagen base de Node
-FROM node:18
+FROM n8nio/n8n:latest
 
 # Crea directorio dentro del contenedor
 WORKDIR /app
