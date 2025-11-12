@@ -34,4 +34,9 @@ const start = async () => {
   }
 };
 
+app.listen(process.env.PORT || 10000, () => {
+  console.log(`Servidor ejecutándose en el puerto ${process.env.PORT || 10000}`);
+});
+
+
 start();
