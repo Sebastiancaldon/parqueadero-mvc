@@ -17,6 +17,11 @@ sequelize.sync({ force: true }) // ⚠️ esto borra y recrea las tablas
   .then(() => console.log("Tablas sincronizadas correctamente"))
   .catch(err => console.error("Error al sincronizar tablas:", err));
 
+app.get("/", (req, res) => {
+  res.send("🚗 API del parqueadero funcionando correctamente 🚀");
+});
+
+
 const start = async () => {
   try {
     await sequelize.authenticate();
